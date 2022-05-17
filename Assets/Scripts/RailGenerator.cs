@@ -10,6 +10,8 @@ public class RailGenerator : MonoBehaviour
     [SerializeField] private RailSegment _straight;
     [SerializeField] private RailSegment _curveL, _curveR;
     [SerializeField] private Pole _polePrefab;
+    [SerializeField] private GameObject _stationPrefab;
+    [SerializeField] private int _minStationLenght;
     [SerializeField] private int _polesInterval;
 
 
@@ -92,6 +94,12 @@ public class RailGenerator : MonoBehaviour
             _activeRails.Add(rail);
         }
         DrawPoles();
+        if(amountOfRails > _minStationLenght)
+        {
+            var rail = _activeRails[_activeRails.Count / 2];
+
+            Instantiate(_stationPrefab, rail.StationDock);
+        }
     }
 
     private void DrawPoles()
@@ -145,7 +153,7 @@ public class RailGenerator : MonoBehaviour
     [Button]
     public void Bake()
     {
-        if (_editMode == false) return;
+        if (_editMode == false || _lastSegment == null) return;
         ToggleEditMode();
 
         transform.position = _lastSegment.Dock.position;

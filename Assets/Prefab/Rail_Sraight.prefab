@@ -33,6 +33,7 @@ Transform:
   - {fileID: 6213212967918285250}
   - {fileID: 9091469745486152616}
   - {fileID: 1267373853598165553}
+  - {fileID: 8880926210271328155}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dock: {fileID: 6213212967918285250}
   _poleDock: {fileID: 1267373853598165553}
+  _stationDock: {fileID: 8880926210271328155}
   _plank: {fileID: 8053158561581089705, guid: a93fac4c8984a094dbff97fa6acf1855, type: 3}
   _activePlanks: []
 --- !u!1 &6684335375031468768
@@ -160,6 +162,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4178701144485338655}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7495427551442529256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8880926210271328155}
+  m_Layer: 0
+  m_Name: Station Dock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8880926210271328155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7495427551442529256}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4178701144485338655}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8355316980062261578
 GameObject:

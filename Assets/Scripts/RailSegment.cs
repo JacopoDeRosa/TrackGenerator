@@ -6,12 +6,14 @@ public class RailSegment : MonoBehaviour
 {
     [SerializeField] private Transform _dock;
     [SerializeField] private Transform _poleDock;
+    [SerializeField] private Transform _stationDock;
     [SerializeField] protected GameObject _plank;
     [SerializeField] protected List<GameObject> _activePlanks;
 
 
     public Transform Dock { get => _dock; }
     public Transform PoleDock { get => _poleDock; }
+    public Transform StationDock { get => _stationDock; }
 
     public virtual void Init(RailGenerator parent)
     {
